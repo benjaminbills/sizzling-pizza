@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  font-family: "Pacifico", cursive;
+  background-image: url(../images/top-view-tasty-pizza-wooden-background.jpg);
+  background-size: cover;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.deal-of-day {
+  padding-top: 500px;
+}
