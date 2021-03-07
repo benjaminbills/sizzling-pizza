@@ -52,3 +52,21 @@ class UI {
     productsDOM.innerHTML = result;
   }
 }
+
+class Storage {
+  static saveProducts(products) {
+    localStorage.setItem("products", JSON.stringify(products));
+  }
+  static getProduct(id) {
+    let products = JSON.parse(localStorage.getItem("products"));
+    return products.find((product) => product.id === id);
+  }
+  static saveOrder() {
+    localStorage.setItem("order", JSON.stringify(order));
+  }
+  static getCart() {
+    return localStorage.getItem("order")
+      ? JSON.parse(localStorage.getItem("order"))
+      : [];
+  }
+}
