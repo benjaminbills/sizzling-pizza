@@ -27,3 +27,28 @@ class Products {
     }
   }
 }
+
+// display products
+class UI {
+  displayProducts(products) {
+    let result = "";
+    products.forEach((product) => {
+      result += `
+      <tr>
+              <th scope="row">
+                <img
+                  src=${product.image}
+                  alt=""
+                  style="width: 80px; height: 80px"
+                />
+              </th>
+              <td>${product.name}</td>
+              
+              <td class="ingredient">${product.ingredient}</td>
+              <td>Ksh ${product.price}</td>
+              <td><button  class="btn btn-primary order-btn" data-id=${product.id}>Order now</button></td>
+            </tr>`;
+    });
+    productsDOM.innerHTML = result;
+  }
+}
