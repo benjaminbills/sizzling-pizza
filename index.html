@@ -10,12 +10,18 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">SIZZLING PIZZA</a>
         <button
@@ -35,40 +41,83 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
+              <a class="nav-link" href="#">Menu</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="deal-of-day">
-      <div class="container">
-        <h1 class="text-center mb-4">Deal of the day</h1>
-        <h2 class="text-center mb-4">30% off</h2>
+      <div class="container text-center">
+        <h1 class="mb-4">Deal of the day</h1>
+        <h2 class="mb-4">30% off</h2>
+        <p>Order any of the below listed pizza and get 30% off.</p>
+        <p>This offer will last till 1st of April 2021.</p>
+        <p class="pb-4">Show your collegue some love today.</p>
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
-            <img class="img-fluid rounded" src="/images/new.png" alt="" />
+          <div class="col-4 col-sm-3 portfolio-image">
+            <img class="img-fluid" src="/images/pizzas/pizza1.png" alt="" />
+            <div class="overlay">
+              <p>Mushroom Express</p>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 mb-3"></div>
+          <div class="col-4 col-sm-3 portfolio-image">
+            <img class="img-fluid" src="/images/pizzas/pizza2.png" alt="" />
+            <div class="overlay">
+              <p>Italiano</p>
+            </div>
+          </div>
+          <div class="col-4 col-sm-3 portfolio-image">
+            <img class="img-fluid" src="/images/pizzas/pizza4.png" alt="" />
+            <div class="overlay">
+              <p>chicken pile</p>
+            </div>
+          </div>
+          <div class="col-4 col-sm-3 portfolio-image">
+            <img class="img-fluid" src="/images/pizzas/pizza5.png" alt="" />
+            <div class="overlay">
+              <p>Veggie classic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="order-now">
+      <div class="container">
+        <h1 class="text-center pb-3">Sizzling Pizza Menu</h1>
+        <div class="menu-list">
+          <table class="table">
+            <tbody class="products-center"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="container order-details">
+      <div class="row pb-3 pt-3">
+        <div class="col-6 justify-content-right">
+          <h2 class="text-center">Your order</h2>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary clear-order">Clear Order</button>
+        </div>
+      </div>
+
+      <table class="table order">
+        <tbody class="order-content"></tbody>
+      </table>
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-primary">Check out</button>
+        </div>
+        <div class="col-6">
+          <h3 class="text-end">
+            Your total: ksh <span class="order-total">0</span>
+          </h3>
         </div>
       </div>
     </div>
 
-    <hr />
-
-    <div class="order-details"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
       integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"

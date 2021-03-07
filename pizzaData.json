@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "peperroni",
+    "price": 1200,
+    "ingredient": "tomato, cheese, butter, onion, garlic",
+    "image": "./images/pizzas/pizza1.png"
+  },
+  {
+    "id": "2",
+    "name": "monalisa",
+    "price": 1300,
+    "ingredient": "tomato, cheese, butter, ham",
+    "image": "./images/pizzas/pizza2.png"
+  },
+  {
+    "id": "3",
+    "name": "paprika-ex",
+    "price": 1000,
+    "ingredient": "tomato, cheese, butter, pineapple",
+    "image": "./images/pizzas/pizza3.png"
+  },
+  {
+    "id": "4",
+    "name": "teriaki thai",
+    "price": 2000,
+    "ingredient": "tomato, cheese, teriaki, chicken",
+    "image": "./images/pizzas/pizza4.png"
+  }
+]

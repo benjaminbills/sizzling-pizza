@@ -2,12 +2,15 @@
 
 body {
   font-family: "Pacifico", cursive;
-  background-image: url(../images/top-view-tasty-pizza-wooden-background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/top-view-tasty-pizza-wooden-background.jpg);
   background-size: cover;
   background-position: 50% 70%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: aliceblue;
 }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -17,5 +20,45 @@ body {
 }
 
 .deal-of-day {
-  padding-top: 500px;
+  padding-top: 20rem;
+  padding-bottom: 3rem;
+  font-size: 1.5rem;
+}
+
+.find-us {
+  background: url(../images/find.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.order-online {
+  background: url(../images/order.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.order-online,
+.find-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 540px;
+  height: 150px;
+  margin: 10px;
+  background-color: #b1b1b1;
+  flex-direction: column;
+}
+#pizza-menu {
+  font-size: 25px;
+}
+
+option {
+  font-size: 15px;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+  cursor: pointer;
+}
+
+table {
+  background: rgba(233, 241, 233, 0.6);
 }
