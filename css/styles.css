@@ -25,27 +25,6 @@ body {
   font-size: 1.5rem;
 }
 
-.find-us {
-  background: url(../images/find.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.order-online {
-  background: url(../images/order.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.order-online,
-.find-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 540px;
-  height: 150px;
-  margin: 10px;
-  background-color: #b1b1b1;
-  flex-direction: column;
-}
 #pizza-menu {
   font-size: 25px;
 }
@@ -61,4 +40,15 @@ option {
 
 table {
   background: rgba(233, 241, 233, 0.6);
+}
+.order-details,
+.delivery-cost {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+.hide {
+  visibility: hidden;
 }
