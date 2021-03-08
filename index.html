@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
+    <title>Sizzling Pizza</title>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -87,7 +87,69 @@
         <h1 class="text-center pb-3">Sizzling Pizza Menu</h1>
         <div class="menu-list">
           <table class="table">
-            <tbody class="products-center"></tbody>
+            <tbody id="products-center">
+              <tr>
+                <th scope="row">
+                  <img
+                    src="/images/pizzas/pizza1.png"
+                    alt=""
+                    style="width: 80px; height: 80px"
+                  />
+                </th>
+                <form id="pizzaForm">
+                  <td>
+                    <select id="pizzaName" class="form-select">
+                      <option selected value="0">Pizza</option>
+                      <option value="Mushroom-express">Mushroom-express</option>
+                      <option value="Italiano">Italiano</option>
+                      <option value="Chicken-pie">Chicken Pie</option>
+                    </select>
+                  </td>
+
+                  <td>
+                    <select id="pizzaSize" class="form-select">
+                      <option value="0">Size</option>
+                      <option value="Small">Small</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Large">Large</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="pizzaCrust" class="form-select">
+                      <option selected value="0">Crust</option>
+                      <option value="Thin-crust">Thin Crust</option>
+                      <option value="Thick-crust">Thick Crust</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="pizzaTopping" class="form-select">
+                      <option selected value="0">Toppings</option>
+                      <option value="extra-chicken">Chicken</option>
+                      <option value="extra-cheddar">Cheddar</option>
+                      <option value="extra-mushroom">Mushroom</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="pizzaQuantity" class="form-select">
+                      <option selected value="0">Quantity</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </td>
+                  <td>
+                    <button
+                      type="submit"
+                      class="btn btn-primary order-btn"
+                      id="order-now"
+                    >
+                      Order now
+                    </button>
+                  </td>
+                </form>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
@@ -98,22 +160,60 @@
         <div class="col-6 justify-content-right">
           <h2 class="text-center">Your order</h2>
         </div>
-        <div class="col-6">
-          <button class="btn btn-primary clear-order">Clear Order</button>
-        </div>
       </div>
 
       <table class="table order">
-        <tbody class="order-content"></tbody>
+        <tbody id="order-content"></tbody>
       </table>
-      <div class="row">
+      <div id="delivery" class="pb-3">
+        <form class="delivery">
+          <h3>
+            Do you want your order to be delivered? Delivery cost is 500ksh
+          </h3>
+          <select id="delivery-option" class="form-select mb-2">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+          <div class="row address">
+            <label for="">ENTER ADDRESS</label>
+            <div class="col-auto">
+              <input
+                id="address-input"
+                value=""
+                class="form-control"
+                type="text"
+                required
+              />
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary" id="add-address">
+                Add Address
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="row pb-4">
         <div class="col-6">
-          <button class="btn btn-primary">Check out</button>
+          <p>
+            Your order will be delivered to address
+            <span id="address-details"></span>
+          </p>
         </div>
         <div class="col-6">
           <h3 class="text-end">
-            Your total: ksh <span class="order-total">0</span>
+            Delivery cost: ksh <span id="delivery-cost">500</span>
           </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button type="submit" id="checkout" class="btn btn-primary">
+            Check out
+          </button>
+        </div>
+        <div class="col-6">
+          <h3 class="text-end">Total: ksh <span id="order-total">0</span></h3>
         </div>
       </div>
     </div>
@@ -133,6 +233,7 @@
       integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
       crossorigin="anonymous"
     ></script>
+
     <script src="/js/app.js"></script>
   </body>
 </html>
