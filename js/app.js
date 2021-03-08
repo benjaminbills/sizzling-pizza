@@ -75,3 +75,9 @@ pizzaForm.addEventListener("submit", function (e) {
     orderDetails.classList.add("visible");
   }
 });
+deliveryForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let addressDetails = document.getElementById("address-details");
+  let addInput = document.getElementById("address-input").value;
+  addressDetails.innerHTML = addInput;
+});
