@@ -13,9 +13,9 @@ function Pizza(name, size, crust, topping, quantity) {
   this.topping = topping;
   this.quantity = quantity;
   this.total = function () {
-    let pizzPrice = [];
-    pizzPrice.push(this.price);
-    pizzPrice.reduce((a, b) => a + b, 0);
+    let pizzaPrice = [];
+    pizzaPrice.push(this.price);
+    pizzaPrice.reduce((a, b) => a + b, 0);
   };
   this.price = function () {
     let smallPizza = 1000;
