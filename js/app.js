@@ -62,19 +62,13 @@ pizzaForm.addEventListener("submit", function (e) {
     const tr = document.createElement("tr");
 
     tr.classList.add(".order-item");
-    tr.innerHTML = `           
-             <th scope="row">
-             ${pizza.name}
-           </th>
-           <td>${pizza.size}
-           </td>
-           <td>${pizza.crust}
-           </td>
-           <td>${pizza.quantity}
-           </td>
-           <td>${pizza.price()}
-           </td>
-           `;
+    tr.innerHTML = `
+      <th scope="row">${pizza.name}</th>
+      <td>${pizza.size}</td>
+      <td>${pizza.crust}</td>
+      <td>${pizza.quantity}</td>
+      <td>${pizza.price()}</td>
+    `;
     orderContent.appendChild(tr);
     orderTotal.innerHTML = `${totalPrice}`;
     pizzaForm.reset();
