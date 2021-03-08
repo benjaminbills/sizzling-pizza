@@ -81,3 +81,7 @@ deliveryForm.addEventListener("submit", function (e) {
   let addInput = document.getElementById("address-input").value;
   addressDetails.innerHTML = addInput;
 });
+document.getElementById("checkout").addEventListener("click", function (e) {
+  alert("you will recieve your order in 20mins");
+  location.reload();
+});
