@@ -41,3 +41,19 @@ function Pizza(name, size, crust, topping, quantity) {
     }
   };
 }
+
+let prices = [];
+pizzaForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let size = document.getElementById("pizzaSize").value;
+  let crust = document.getElementById("pizzaCrust").value;
+  let topping = document.getElementById("pizzaTopping").value;
+  let quantity = document.getElementById("pizzaQuantity").value;
+  let name = document.getElementById("pizzaName").value;
+
+  let pizza = new Pizza(name, size, crust, topping, quantity);
+
+  prices.push(pizza.price() * quantity);
+  let totalPrice = prices.reduce((a, b) => a + b);
+  console.log(totalPrice);
+});
