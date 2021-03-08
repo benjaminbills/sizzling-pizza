@@ -1,7 +1,6 @@
 # Sizzling Pizza
 
-This is a basic web app that show cases the services of
-Delani Studio.
+This is Pizza Ordering web app.
 
 ## Project setup instruction
 
