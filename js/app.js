@@ -56,4 +56,28 @@ pizzaForm.addEventListener("submit", function (e) {
   prices.push(pizza.price() * quantity);
   let totalPrice = prices.reduce((a, b) => a + b);
   console.log(totalPrice);
+  if (pizza.size == "0" || pizza.crust == "0" || pizza.quantity == "0") {
+    alert("please select size, crust and quantity");
+  } else {
+    const tr = document.createElement("tr");
+
+    tr.classList.add(".order-item");
+    tr.innerHTML = `           
+             <th scope="row">
+             ${pizza.name}
+           </th>
+           <td>${pizza.size}
+           </td>
+           <td>${pizza.crust}
+           </td>
+           <td>${pizza.quantity}
+           </td>
+           <td>${pizza.price()}
+           </td>
+           `;
+    orderContent.appendChild(tr);
+    orderTotal.innerHTML = `${totalPrice}`;
+    pizzaForm.reset();
+    orderDetails.classList.add("visible");
+  }
 });
